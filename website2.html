@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Royal Gamer Help</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --card:#f3f4f6;
+      --accent:#1877f2;
+    }
+
+    body.dark{
+      --bg:#0f172a;
+      --text:#e5e7eb;
+      --card:#111827;
+    }
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      transition:0.3s;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:15px 30px;
+      border-bottom:1px solid #ddd;
+      background:var(--bg);
+      position:sticky;
+      top:0;
+    }
+
+    header img{
+      height:36px;
+    }
+
+    nav a{
+      margin-left:20px;
+      text-decoration:none;
+      color:var(--text);
+      font-size:14px;
+    }
+
+    .hero{
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    .hero h1{
+      margin-bottom:20px;
+    }
+
+    .search{
+      max-width:500px;
+      margin:0 auto;
+    }
+
+    .search input{
+      width:100%;
+      padding:12px 15px;
+      border-radius:6px;
+      border:1px solid #ccc;
+      font-size:16px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      padding:40px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:20px;
+      border-radius:8px;
+    }
+
+    .card button{
+      margin-top:10px;
+      padding:8px 12px;
+      border:none;
+      background:var(--accent);
+      color:white;
+      border-radius:4px;
+      cursor:pointer;
+    }
+
+    footer{
+      background:#0b1c2d;
+      color:white;
+      padding:30px;
+      text-align:center;
+    }
+
+    .dark-btn{
+      cursor:pointer;
+      margin-left:20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="https://dummyimage.com/120x40/000/fff&text=RoyalGamer" alt="Royal Gamer Logo">
+
+  <nav>
+    <a href="https://www.youtube.com/@RoyalGamerRG06" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/royalgamerrg06" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <span class="dark-btn" onclick="toggleDark()">🌙 Dark Mode</span>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Hi, how can we help?</h1>
+  <div class="search">
+    <input type="text" placeholder="Search Royal Gamer topics">
+  </div>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>About Royal Gamer</h3>
+    <p>Learn about my gaming journey, content style and platforms.</p>
+    <button>Learn more</button>
+  </div>
+
+  <div class="card">
+    <h3>YouTube Channel</h3>
+    <p>Minecraft shorts, funny moments, hacks and gameplay.</p>
+    <button onclick="window.open('https://www.youtube.com/@RoyalGamerRG06')">Visit</button>
+  </div>
+
+  <div class="card">
+    <h3>Instagram Page</h3>
+    <p>Daily Minecraft reels, memes and highlights.</p>
+    <button onclick="window.open('https://www.instagram.com/royalgamerrg06')">Open</button>
+  </div>
+
+  <div class="card">
+    <h3>Facebook Page</h3>
+    <p>Gaming posts, videos and updates.</p>
+    <button onclick="window.open('https://www.facebook.com')">Open</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 RoyalGamerRG06 • Inspired by Facebook Help Centre</p>
+</footer>
+
+<script>
+  function toggleDark(){
+    document.body.classList.toggle('dark');
+  }
+</script>
+
+</body>
+</html>
